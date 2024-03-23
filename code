@@ -1,0 +1,248 @@
+create table user_upload(uid integer primary key (uid));
+
+create table Login(uid integer, username varchar(100), contact integer , 
+email varchar(100) , password varchar(100));
+
+create table category(cat_id varchar(10) , cat_name varchar(20) , 
+cat_description varchar(200)
+primary key (cat_id))
+
+create table customer_profile(name varchar(100) , contact integer , customer_id varchar(100) , 
+address varchar(100), zip_code varchar(100) ,order_id integer, state varchar(100) , 
+city varchar(100) , 
+primary key (customer_id,order_id))
+
+create table product( cat_id varchar(10),product_id varchar(10) , 
+product_name varchar(50) ,color varchar(10) , brand varchar(20) ,price integer
+primary key (product_id,product_name,price, brand))
+
+create table cart(customer_id varchar(100), cat_id varchar(100), 
+product_id varchar(100),product_name varchar(100), order_id integer, price integer)
+
+create table headphones(cat_id varchar(100) , product_id varchar(100) , 
+product_name varchar(100) ,
+brand varchar(100) ,price integer , stock integer , discount varchar(10) )
+
+create table smartwatches(cat_id varchar(10) , product_id varchar(10) , 
+product_name varchar(100) ,brand varchar(20) ,price integer , stock integer ,
+discount varchar(10))
+
+create table computer_accessories(cat_id varchar(10) , product_id varchar(10) , product_name varchar(100) ,
+brand varchar(20) ,price integer , stock integer , discount varchar(10))
+
+create table Speaker(cat_id varchar(100) , product_id varchar(100) , product_name varchar(100) , 
+brand varchar(100) ,price integer , stock integer , discount varchar(100) );
+
+create table camera_accessories(cat_id varchar(100) , product_id varchar(100) , product_name varchar(100) ,
+brand varchar(100) ,price integer , stock integer , discount varchar(100) );
+
+create table Laptops(cat_id varchar(100) , product_id varchar(100) , product_name varchar(100) ,
+brand varchar(100) ,price integer , stock integer , discount varchar(100) );
+
+
+
+
+insert into user_upload values(101)
+insert into user_upload values(102)
+insert into user_upload values(103)
+insert into user_upload values(104)
+insert into user_upload values(105)
+insert into user_upload values(106)
+insert into user_upload values(107)
+insert into user_upload values(108)
+insert into user_upload values(109)
+insert into user_upload values(110)
+insert into user_upload values(111)
+insert into user_upload values(112)
+insert into user_upload values(113)
+insert into user_upload values(114)
+insert into user_upload values(115)
+
+insert into Login values(101,'Shrey_Goyal',76543211,'shreygoyal@gmail.com','shrey123');
+insert into Login values(102,'Gautam_Kundalia',76543212,'gautamkundalia@gmail.com','gautam123');
+insert into Login values(103,'Siddharth_Maru',76543213,'sidmaru@gmail.com','sid123');
+insert into Login values(104,'Omkar_Rasal',76543214,'oprasal@gmail.com','oprasal123');
+insert into Login values(105,'Pranav_Adik',76543215,'pranavadik@gmail.com','pranav123');
+insert into Login values(106,'Tejas_Patil',76543216,'tajaspatil@gmail.com','tejas123');
+insert into Login values(107,'Mohit_Mali',76543217,'mohitmali@gmail.com','mohit123');
+insert into Login values(108,'Sumit_Gharate',76543218,'sumitgharate@gmail.com','sumit123');
+insert into Login values(109,'Rohit_Dahake',76543219,'rohitdahake@gmail.com','rohit123');
+insert into Login values(110,'Aniket_Akade',76543220,'aniketakade@gmail.com','aniket123');
+insert into Login values(111,'Vijay_Sahu',76543221,'vijaysahu@gmail.com','vijay123');
+insert into Login values(112, 'Sanyam_Jain',76543223,'sanyamjain@gmail.com','sanyam123');
+insert into Login values(113,'Takshil_Shah',76543224,'takshilshah@gmail.com','takshil123');
+insert into Login values(114,'Vatsal_Joshi',76543225,'vatsaljoshi@gmail.com','vatsal123');
+insert into Login values(115,'Mokshit_Kitawat',76543226,'mokshitkitawat@gmail.com','mokshit123');
+
+
+insert into headphones values('H01','H11','boAt Rockerz 370','Boat',799,60,'68%')
+insert into headphones values('H02','H12','Urbanista Los Angeles Sand Gold','Urbanista',1999,15,'20%')
+insert into headphones values('H03','H13','ZEBRONICS Zeb-Thunder','Zebronics',498,20,'64%')
+insert into headphones values('H04','H14','JBL C50HI,','JBL',499,150,'50%')
+insert into headphones values('H05','H15','Infinity Glide 510','Infinity',1599,10,'60%')
+
+
+insert into smartwatches values('S01','S11','Zeb-Fit 580ch','Zebronics',2099,30,'73%')
+insert into smartwatches values('S02','S12','Noise Pulse 2','Noise',2299,20,'62%')
+insert into smartwatches values('S03','S13','boAt Xtend Smartwatch','Boat',2399,18,'70%')
+insert into smartwatches values('S04','S14','Fire-Boltt Phoenix','Bolt',1899,45,'81%')
+insert into smartwatches values('S05','S15','pTron Force X10','pTron',1199,70,'80%')
+
+
+insert into computer_accessories values('CO01','CO11','Zebronics ZEB-90HB USB Hub','Zebronics',199,140,'60%')
+insert into computer_accessories values('CO02','CO12','AmazonBasics Monitor Stand,','Amazon Basics',1899,40,'39%')
+insert into computer_accessories values('CO03','CO13','TP-Link USB Bluetooth Adapter for PC 4.0','TP-Link',398,120,'43%')
+insert into computer_accessories values('CO04','CO14','RPM Euro Games Laptop/PC Controller','RPM',699,80,'53%')
+insert into computer_accessories values('CO05','CO15','Zeb-Transformer Gaming Keyboard and Mouse Combo','Zebronics',1099,60,'45%')
+
+
+
+insert into Speaker values('SP01','SP11','JBLGO3','JBL', 3000,40,'20%');
+insert into Speaker values('SP02','SP12','Alexa','Echo Dot', 1750,50,'10%');
+insert into Speaker values('SP03','SP13','boAT Stone','boAT', 799,4050,'30%');
+insert into Speaker values('SP04','SP14','Zeb Buddy','Zebronics', 1300,67,'60%');
+insert into Speaker values('SP05','SP15','Infinity','JBL', 789,56,'30%');
+
+insert into camera_accessories values('CA01','CA11','Camera Bagpack','Digitech', 1249,30,'20%');
+insert into camera_accessories values('CA02','CA12','Tripod','Sounce', 489,50,'10%');
+insert into camera_accessories values('CA03','CA13','Electroinc Flash','Digitech', 2100,60,'30%');
+insert into camera_accessories values('CA04','CA14','Hand Grip','Electromania', 279,40,'10%');
+insert into camera_accessories values('CA03','CA15','Shoe Mount Adapter','Shopee', 499,38,'20%');
+
+insert into Laptops values('LT01','LT11','Victus','HP', 65990,78,'20%');
+insert into Laptops values('LT02','LT12','Modern','MSI', 60000,34,'30%');
+insert into Laptops values('LT03','LT13','MAC','APPLE', 78000,13,'40%');
+insert into Laptops values('LT04','LT14','ACER','PREDATOR', 90000,21,'15%');
+insert into Laptops values('LT05','LT15','G17','ASUS', 150000,90,'12%');
+
+insert into category values('H01','Headphones','Best Quality Headphones with Great Sound and Bass')
+insert into category values('H02','Headphones','Best Quality Headphones with Great Sound and Bass')
+insert into category values('H03','Headphones','Best Quality Headphones with Great Sound and Bass')
+insert into category values('H04','Headphones','Best Quality Headphones with Great Sound and Bass')
+insert into category values('H05','Headphones','Best Quality Headphones with Great Sound and Bass')
+
+insert into category values('S01','Smartwatches','Best Quality smartwatches with atleast 13 days battery life')
+insert into category values('S02','Smartwatches','Best Quality smartwatches with atleast 13 days battery life')
+insert into category values('S03','Smartwatches','Best Quality smartwatches with atleast 13 days battery life')
+insert into category values('S04','Smartwatches','Best Quality smartwatches with atleast 13 days battery life')
+insert into category values('S05','Smartwatches','Best Quality smartwatches with atleast 13 days battery life')
+
+insert into category values('CO01','Computer Accessories','Best Quality Computer Accessories with 2 years warranty')
+insert into category values('CO02','Computer Accessories','Best Quality Computer Accessories with 2 years warranty')
+insert into category values('CO03','Computer Accessories','Best Quality Computer Accessories with 2 years warranty')
+insert into category values('CO04','Computer Accessories','Best Quality Computer Accessories with 2 years warranty')
+insert into category values('CO05','Computer Accessories','Best Quality Computer Accessories with 2 years warranty')
+
+insert into category values('CA01','Camera Accessories','Best Quality Camera Accessories with 1 year warranty')
+insert into category values('CA02','Camera Accessories','Best Quality Camera Accessories with 1 year warranty')
+insert into category values('CA03','Camera Accessories','Best Quality Camera Accessories with 1 year warranty')
+insert into category values('CA04','Camera Accessories','Best Quality Camera Accessories with 1 year warranty')
+insert into category values('CA05','Camera Accessories','Best Quality Camera Accessories with 1 year warranty')
+
+insert into category values('SP01','Speakers','Best Quality in Sound and Bass with 1 year warranty')
+insert into category values('SP02','Speakers','Best Quality in Sound and Bass with 1 year warranty')
+insert into category values('SP03','Speakers','Best Quality in Sound and Bass with 1 year warranty')
+insert into category values('SP04','Speakers','Best Quality in Sound and Bass with 1 year warranty')
+insert into category values('SP05','Speakers','Best Quality in Sound and Bass with 1 year warranty')
+
+insert into category values('LT01','Laptops','This Masterpeices are great in Battery Life,with good processing , great graphcics with 5 years warranty')
+insert into category values('LT02','Laptops','This Masterpeices are great in Battery Life,with good processing , great graphcics with 5 years warranty')
+insert into category values('LT03','Laptops','This Masterpeices are great in Battery Life,with good processing , great graphcics with 5 years warranty')
+insert into category values('LT04','Laptops','This Masterpeices are great in Battery Life,with good processing , great graphcics with 5 years warranty')
+insert into category values('LT05','Laptops','This Masterpeices are great in Battery Life,with good processing , great graphcics with 5 years warranty')
+
+
+
+insert into product values ('H01','H11','boAt Rockerz 370','Black','Boat',799)
+insert into product values ('H02','H12','Urbanista Los Angeles Sand Gold','White','Urbanista',1999)
+insert into product values ('H03','H13','ZEBRONICS Zeb-Thunder','Grey','Zebronics',498)
+insert into product values ('H04','H14','JBL C50HI','Black','JBL',499)
+insert into product values ('H05','H15','Infinity Glide 510','Black','Infinity',1599)
+
+insert into product values('S01','S11','Zeb-Fit 580ch','Grey','Zebronics',2099)
+insert into product values('S02','S12','Noise Pulse 2','Black','Noise',2299)
+insert into product values('S03','S13','boAt Xtend Smartwatch','Black','Boat',2399)
+insert into product values('S04','S14','Fire-Boltt Phoenix','Blue','Bolt',1899)
+insert into product values('S05','S15','pTron Force X10','Black','pTron',1199)
+
+insert into product values('CO01','CO11','Zebronics ZEB-90HB USB Hub','White','Zebronics',199)
+insert into product values('CO02','CO12','AmazonBasics Monitor Stand','Grey','Amazon Basics',1899)
+insert into product values('CO03','CO13','TP-Link USB Bluetooth Adapter for PC 4.0','Black','TP-Link',398)
+insert into product values('CO04','CO14','RPM Euro Games Laptop/PC Controller','Black','RPM',699)
+insert into product values('CO05','CO15','Zeb-Transformer Gaming Keyboard and Mouse Combo','Silver','Zebronics',1099)
+
+insert into product values('CA01','CA11','Camera Bagpack','Grey','Digitech',1249)
+insert into product values('CA02','CA12','Tripod','Blue','Sounce',489)
+insert into product values('CA03','CA13','Electroinc Flash','Black','Digitech',2100)
+insert into product values('CA04','CA14','Hand Grip','Black','Electromania',279)
+insert into product values('CA05','CA15','Shoe Mount Adapter','Black','Shopee',499)
+
+insert into product values('SP01','SP11','JBLGO3','Black','JBL',3000)
+insert into product values('SP02','SP12','Alexa','grey','Echo Dot',1750)
+insert into product values('SP03','SP13','boAT Stone','White','Boat',799)
+insert into product values('SP04','SP14','Zeb Buddy','Black','Zebronics',1300)
+insert into product values('SP05','SP15','Infinity','Brown','JBL',789)
+
+insert into product values('LT01','LT11','Victus','Black','HP',65990)
+insert into product values('LT02','LT12','Modern','Red','MSI',60000)
+insert into product values('LT03','LT13','MAC','Grey','APPLE',78000)
+insert into product values('LT04','LT14','ACER','Green','PREDATOR',65990)
+insert into product values('LT05','LT15','G17','Black','ASUS',150000)
+
+
+insert into cart values( 'A01','S01','S11','Zeb-Fit 580ch',1101,2099);
+insert into cart values( 'A02','S02','S12','Noise Pulse 2',1102,2299);
+insert into cart values( 'A02','H01','H11','boAT Rockerz 370',1102,799);
+insert into cart values( 'A02','LT04','LT14','ACER',1102,90000);
+insert into cart values( 'A02','CO01','C011','Zebronics ZEB-90HB USB Hub',1102,199);
+insert into cart values( 'A03','S03','S13','boAt Xtend Smartwatch',1103,2399);
+insert into cart values( 'A03','H02','H12','Urbanista Los Angeles Sand Gold',1103,1999);
+insert into cart values( 'A04','S04','S14','Fire-Boltt Phoenix',1104,1899);
+insert into cart values( 'A04','H03','H13','ZEBRONICS Zeb-Thunder',1104,498);
+insert into cart values( 'A04','LT05','LT15','G17',1104,150000);
+insert into cart values( 'A04','CA01','CA11','Camera Bagpack',1104,1249);
+insert into cart values( 'A04','SP03','SP13','boAT Stone',1104,799);
+insert into cart values( 'A05','S05','S15','pTron Force X10',1105,1199);
+insert into cart values( 'A05','H04','H14','JBL C50HI,',1105,499);
+insert into cart values( 'A05','CA02','CA12','Tripod',1105,489);
+insert into cart values( 'A06','CO01','C011','Camera Bagpack',1106,1249);
+insert into cart values( 'A06','H05','H15','Infinity Glide 510',1106,1599);
+insert into cart values( 'A07','CO02','C012','AmazonBasics Monitor Stand,',1107,1899);
+insert into cart values( 'A07','SP01','SP11','JBLGO3',1107,3000);
+insert into cart values( 'A07','LT03','LT13','MAC',1107,78000); 
+insert into cart values( 'A08','CO03','C013','TP-Link USB Bluetooth Adapter for PC 4.0',1108,398);
+insert into cart values( 'A09','CO04','C014','RPM Euro Games Laptop/PC Controller',1109,699);
+insert into cart values( 'A09','SP03','SP13','boAT Stone',1109,799);
+insert into cart values( 'A09','S02','S12','Noise Pulse 2',1109,2299);
+insert into cart values( 'A09','CA04','CA14','Hand Grip',1109,279);
+insert into cart values( 'A10','CO05','CO15','Zeb-Transformer Gaming Keyboard and Mouse Combo',1110,1099);
+insert into cart values( 'A10','SP04','SP14','Zeb Buddy',1110,1300);
+insert into cart values( 'A10','LT02','LT12','Modern',1110,60000);
+insert into cart values( 'A11','CA01','CA11','Camera Bagpack',1111,1249);
+insert into cart values( 'A12','CA02','CA12','Tripod',1112,489);
+insert into cart values( 'A12','SP05','SP15','Infinity',1112,789);
+insert into cart values( 'A13','CA03','CA13','Electroinc Flash',1113,2100);
+insert into cart values( 'A13','LT01','LT11','Victus',1113,65990);
+insert into cart values( 'A13','CO02','CO12','AmazonBasics Monitor Stand,',1113,1899);
+insert into cart values( 'A13','H02','H12','Urbanista Los Angeles Sand Gold',1113,1999);
+insert into cart values( 'A13','S04','S14','Fire-Boltt Phoenix',1103,1899);
+insert into cart values( 'A14','CA04','CA14','Hand Grip',1114,279);
+insert into cart values( 'A14','LT02','LT12','Modern',1114,60000);
+insert into cart values( 'A15','CA05','CA15','Shoe Mount Adapter',1115,499);
+insert into cart values( 'A15','LT03','LT13','MAC',1115,78000);
+
+insert into customer_profile values ( 'Shrey Goyal',76543211,'A01','Emerald','A41101',1101,'Gujarat','Vapi');
+insert into customer_profile values ( 'Gautam Kundalia',76543212,'A02','Impera Homes','B41102',1102,'Assam','Johrat');
+insert into customer_profile values ( 'Siddharth Maru',76543213,'A03','SafeHouse Heights','C41103',1103,'Maharashtra','Mumbai');
+insert into customer_profile values ( 'Omkar Rasal',76543214,'A04','Glora Heights','D41104',1104,'Maharashtra','Pune');
+insert into customer_profile values ( 'Pranav Adik',76543215,'A05','Real World','E41105',1105,'Maharashtra','Jalgaon');
+insert into customer_profile values ( 'Tejas Patil',76543216,'A06','Your Home','F41106',1106,'Maharashtra','Shirpur');
+insert into customer_profile values ( 'Mohit Mali',76543217,'A07','Blue Stone','G41107',1107,'Maharashtra','Shirpur');
+insert into customer_profile values ( 'Sumit Gharate',76543218,'A08','Freedom flora','H41108',1108,'Maharashtra','Nashik');
+insert into customer_profile values ( 'Rohit Dahake',76543219,'A09','Grey Stone','I41109',1109,'Maharashtra','Shirpur');
+insert into customer_profile values ( 'Aniket Akade',76543220,'A10','Spartan Land','J41110',1110,'Maharashtra','Nashik');
+insert into customer_profile values ( 'Vijay Sahu',76543221,'A11','Escoraa Avenue','K41111',1111,'Rajasthan','Jaipur');
+insert into customer_profile values ( 'Sanyam Jain',76543222,'A12','Granite Glora','L41112',1112,'Rajasthan','Kota');
+insert into customer_profile values ( 'Takshil Shah',76543223,'A13','Epic Stars','M41113',1113,'Gujarat','Vapi');
+insert into customer_profile values ( 'Vatsal Joshi',76543224,'A14','Real Stars','N41114',1114,'Gujarat','Vapi');
+insert into customer_profile values ( 'Mokshit Kitawat',76543225,'A15','Super Nova','O41115',1115,'Gujarat','Vapi');
